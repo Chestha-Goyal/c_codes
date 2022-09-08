@@ -21,7 +21,7 @@ void  printMin(int arr[5])
                 min = arr[i];    
             }    
         }    
-        cout<< "Minimum element is: "<< min <<"\n";    
+        cout<< "Minimum element is: "<< min <<endl;    
 }   
 void  printMax(int arr[5])  
 {  
@@ -33,5 +33,5 @@ void  printMax(int arr[5])
                 max = arr[i];    
             }    
         }    
-        cout<< "Maximum element is: "<< max <<"\n";    
+        cout<< "Maximum element is: "<< max <<endl;    
 }   

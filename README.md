@@ -1,1 +1,1 @@
-Here are codes in c++
+Some basic codes in c++.

@@ -1,2 +1,2 @@
-Some codes in c++.
-Some are of  basic and some are of medium level.
+Here are some codes in c++.
+Some codes are at the basic level and some are at the medium level.

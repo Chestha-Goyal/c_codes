@@ -1,0 +1,82 @@
+#include <iostream>
+#define SIZE 30
+using namespace std;   //when there is no collosion of libraries
+int add_array(int arr[], int n);
+void input(int arr[], int n);
+int main()
+{
+    int arr[SIZE], n, sum;
+    cout<<"enter the arary size: "; 
+    cin>>n;
+    input(arr, n);  //call by address(by default) not call by value
+    sum=add_array(arr,n);
+    cout<<"Sum ="<<sum<<endl;
+
+    return 0;
+}
+
+void input(int arr[], int n){
+    cout<<"Enter array elements: ";
+    for(int i=0;i<n;i++)
+    cin>>arr[i];
+}
+int add_array(int arr[], int n){
+    int s=0;
+    for(int i=0;i<n;i++){
+        s+=arr[i];
+    }
+    return s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <iostream>
+using namespace std;   //when there is no collosion of libraries
+int add_array(int (*p)[5], int n);
+void input(int arr[], int n);
+int main()
+{
+    int arr[5][5], m, n, sum;
+    cout<<"enter the arary size: "; 
+    cin>>m>>n;
+    // input(arr, n);  //call by address(by deflaut) not call by value
+    for(int i=0;i<m;i++){
+        for(int j=0;j>n;j++){
+            cin>>arr[i][j];
+        }
+    }
+    sum=add_array(arr,n);
+    cout<<"Sum ="<<sum<<endl;
+
+    return 0;
+}
+
+// void input(int arr[], int n){
+//     cout<<"Enter array elements: ";
+//     for(int i=0;i<n;i++)
+//     cin>>arr[i];
+// }
+int add_array(int (*p)[5], int n){
+    int s=0;
+    for(int i=0;i<n;i++){
+        s+=p[i][i]+p[i][n-1-i];
+    }
+    return s;
+}
